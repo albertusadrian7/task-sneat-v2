@@ -55,6 +55,7 @@ definePageMeta({
     layout: "default-auth",
     middleware: ["guest"]
 });
+
 const auth = useAuthStore();
 
 const form = ref({

@@ -62,7 +62,7 @@ export const useAuthStore = defineStore("auth", () => {
                 const token = "Bearer " + loginSuccess.data.token;
                 savedToken.value = token;
                 user.value = loginSuccess.data.user;
-                navigateTo("/");
+                navigateTo("/", {replace: true});
             }
         } catch (error: any) {
             if (error.data != null) {
